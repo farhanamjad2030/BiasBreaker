@@ -13,7 +13,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///biasbreaker.db")
+db = SQL("postgresql://neondb_owner:npg_riYhyFIL37Mn@ep-wild-scene-adcomaf5-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require")
 
 
 @app.route("/")
