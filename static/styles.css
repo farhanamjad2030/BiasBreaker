@@ -1,0 +1,64 @@
+/* Size for brand */
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+
+/* For all buttons */
+#b1 {
+    margin-top: 40px;
+}
+
+/* Used in index.html */
+h3 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+/* Used in result.html
+   & history.html */
+h1, h2 {
+    margin-bottom: 30px;
+}
+
+/* Used in ratings.html */
+#ratings {
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+/* Used in index.html
+   & ratings.html */
+.display {
+    display: inline-flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Used in result.html */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Used in history.html */
+.history {
+    text-align: left;
+}
+#datetime {
+    color: rgba(96, 96, 96, 0.5);
+    display: inline-flex;
+}

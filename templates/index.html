@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <form action="/compare" method="post">
+        <div class="mb-3">
+            Option 1 <input class="form-control w-auto display" name="option1" type="text" required>
+        </div>
+        <div class="mb-3">
+            Option 2 <input class="form-control w-auto display" name="option2" type="text" required>
+        </div>
+
+        <h3> Enter Criteria & Weights (1–5) </h3>
+        
+        <div class="mb-3">
+            Criterion 1: <input class="form-control w-auto display" name="criterion0" placeholder="e.g., Salary" type="text" required>
+            Weight: <input class="form-control w-auto display" name="weight0" placeholder="Imp." min="1" max="5" type="number" required>
+        </div>
+        {% for i in range(1, 5) %}
+            <div class="mb-3">
+                Criterion {{ i+1 }}: <input class="form-control w-auto display" name="criterion{{ i }}" type="text">
+                Weight: <input class="form-control w-auto display" name="weight{{ i }}" min="1" max="5" type="number">
+            </div>
+        {% endfor %}
+
+        <button class="btn btn-primary" id="b1" type="submit">Next</button>
+    </form>
+{% endblock %}

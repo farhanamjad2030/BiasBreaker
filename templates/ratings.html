@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ratings
+{% endblock %}
+
+{% block main %}
+    <form action="/result" method="post">
+        <!--To keep the user-entered information in memory for now-->
+        <input type="hidden" name="option1" value="{{ option1 }}">
+        <input type="hidden" name="option2" value="{{ option2 }}">
+
+        <h3 id="ratings">Ratings</h3>
+        {% for criterion in criteria %}
+            <!--To keep the user-entered information in memory for now-->
+            <input type="hidden" name="criterion" value="{{ criterion.name }}">
+            <input type="hidden" name="weight" value="{{ criterion.weight }}">
+
+            <p><strong>{{ criterion.name }}</strong> (Weight: {{ criterion.weight }})</p>
+            {{ option1 }} Rating: <input class="form-control w-auto display" name="rating1" type="number" min="1" max="5" required>
+            {{ option2 }} Rating: <input class="form-control w-auto display" name="rating2" type="number" min="1" max="5" required>
+            <hr>
+        {% endfor %}
+
+        <button class="btn btn-primary" id="b1" type="submit">Calculate</button>
+    </form>
+{% endblock %}

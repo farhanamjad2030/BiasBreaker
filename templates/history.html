@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h2>Decision History</h2>
+
+    {% if decisions %}
+        <ul class="history">
+            {% for decision in decisions %}
+                <li>
+                    <div class="mb-3">
+                        <strong>{{ decision.option1 }}</strong> vs <strong>{{ decision.option2 }}</strong>
+                        → Winner: <strong>{{ decision.winner }}</strong>
+                        <p id="datetime">...... {{ decision.datetime }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No history yet.</p>
+    {% endif %}
+{% endblock %}

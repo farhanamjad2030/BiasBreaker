@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block main %}
+    <h1>Results !</h1>
+    <p>{{ option1 }} Score: {{ total1 }}</p>
+    <p>{{ option2 }} Score: {{ total2 }}</p>
+    <h3>Suggested Choice: <strong>{{ winner }}</strong></h3>
+
+    <!--Searched google on how to use button as a link-->
+    <form action="/">
+        <button class="btn btn-primary" id="b1" type="submit">Start Again</button>
+    </form>
+{% endblock %}
